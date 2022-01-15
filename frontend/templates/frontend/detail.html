@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="nk-content-body">
+    <div class="nk-content-wrap">
+        <div class="nk-block-head nk-block-head-sm">
+            <div class="nk-block-between g-3">
+                <div class="nk-block-head-content">
+                    <h3 class="nk-block-title page-title">Product Details</h3>
+                    <div class="nk-block-des text-soft">
+                        <p>Pesan kopi ini sekarang</p>
+                    </div>
+                </div>
+                <div class="nk-block-head-content">
+                    <a href="html/product-list.html" class="btn btn-outline-light bg-white d-none d-sm-inline-flex"><em
+                            class="icon ni ni-arrow-left"></em><span>Back</span></a>
+                    <a href="html/product-list.html"
+                        class="btn btn-icon btn-outline-light bg-white d-inline-flex d-sm-none"><em
+                            class="icon ni ni-arrow-left"></em></a>
+                </div>
+            </div>
+        </div><!-- .nk-block-head -->
+        <div class="nk-block">
+            <div class="card card-bordered">
+                <div class="card-inner">
+                    <div class="row pb-5">
+                        <div class="col-lg-6">
+                            <div class="product-gallery">
+                                <div class="slider-init" id="sliderFor"
+                                    data-slick='{"arrows": false, "fade": true, "asNavFor":"#sliderNav", "slidesToShow": 1, "slidesToScroll": 1}'>
+                                    <div class="slider-item rounded">
+                                        <img src="{% static 'menukopi/Picture1.jpg' %}" class="rounded w-100" alt="">
+                                    </div>
+                                    <!-- <div class="slider-item rounded">
+                                        <img src="./images/product/lg-g.jpg" class="rounded w-100" alt="">
+                                    </div>
+                                    <div class="slider-item rounded">
+                                        <img src="./images/product/lg-d.jpg" class="rounded w-100" alt="">
+                                    </div>
+                                    <div class="slider-item rounded">
+                                        <img src="./images/product/lg-h.jpg" class="rounded w-100" alt="">
+                                    </div>
+                                    <div class="slider-item rounded">
+                                        <img src="./images/product/lg-e.jpg" class="rounded w-100" alt="">
+                                    </div> -->
+                                </div><!-- .slider-init -->
+                                <div class="slider-init slider-nav" id="sliderNav" data-slick='{"arrows": false, "slidesToShow": 4, "slidesToScroll": 1, "asNavFor":"#sliderFor", "centerMode":true, "focusOnSelect": true, 
+                                "responsive":[{"breakpoint": 768,"settings":{"slidesToShow": 3}}, {"breakpoint": 420,"settings":{"slidesToShow": 2}} ]
+                            }'>
+                                    <div class="slider-item">
+                                        <div class="thumb">
+                                            <img src="{% static 'menukopi/Picture1.jpg' %}" class="rounded" alt="">
+                                        </div>
+                                    </div>
+                                    <!-- <div class="slider-item">
+                                        <div class="thumb">
+                                            <img src="./images/product/lg-g.jpg" class="rounded" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="thumb">
+                                            <img src="./images/product/lg-d.jpg" class="rounded" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="thumb">
+                                            <img src="./images/product/lg-h.jpg" class="rounded" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="thumb">
+                                            <img src="./images/product/lg-e.jpg" class="rounded" alt="">
+                                        </div>
+                                    </div> -->
+                                </div><!-- .slider-nav -->
+                            </div><!-- .product-gallery -->
+                        </div><!-- .col -->
+                        <div class="col-lg-6">
+                            <div class="product-info mt-5">
+                                <h4 class="product-price text-primary">Rp10.000 <small
+                                        class="text-muted del fs-14px">Rp15.000</small></h4>
+                                <h2 class="product-title">Kopi Americano</h2>
+                                <div class="product-rating">
+                                    <ul class="rating">
+                                        <li><em class="icon ni ni-star-fill"></em></li>
+                                        <li><em class="icon ni ni-star-fill"></em></li>
+                                        <li><em class="icon ni ni-star-fill"></em></li>
+                                        <li><em class="icon ni ni-star-fill"></em></li>
+                                        <li><em class="icon ni ni-star-half"></em></li>
+                                    </ul>
+                                    <div class="amount">(2 Reviews)</div>
+                                </div><!-- .product-rating -->
+                                <div class="product-excrept text-soft">
+                                    <p class="lead">Minuman espresso yang dicampur dengan air. Bisa dibuat panas atau dingin</p>
+                                </div>
+                                <div class="product-meta">
+                                    <ul class="d-flex flex-wrap ailgn-center g-2 pt-1">
+                                        <li class="w-140px">
+                                            <div class="form-control-wrap number-spinner-wrap">
+                                                <button
+                                                    class="btn btn-icon btn-outline-light number-spinner-btn number-minus"
+                                                    data-number="minus"><em class="icon ni ni-minus"></em></button>
+                                                <input type="number" class="form-control number-spinner" value="0">
+                                                <button
+                                                    class="btn btn-icon btn-outline-light number-spinner-btn number-plus"
+                                                    data-number="plus"><em class="icon ni ni-plus"></em></button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'pesan-page' %}">
+                                                <button class="btn btn-primary">Order!</button>
+                                            </a>
+                                        </li>
+                                        <li class="ml-n1">
+                                            <button class="btn btn-icon btn-trigger text-primary"><em
+                                                    class="icon ni ni-heart"></em></button>
+                                        </li>
+                                    </ul>
+                                </div><!-- .product-meta -->
+                            </div><!-- .product-info -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div>
+            </div>
+        </div><!-- .nk-block -->
+    </div>
+</div>
+{% endblock body %}

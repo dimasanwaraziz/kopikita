@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block body %}
+                            <div class="nk-content-body">
+                                <div class="nk-content-wrap">
+                                    <div class="components-preview wide-md mx-auto">
+                                        <div class="nk-block-head nk-block-head-lg wide-sm">
+                                            <div class="nk-block-head-content">
+                                                <h2 class="nk-block-title fw-normal">Form Pemesanan</h2>
+                                                <div class="nk-block-des">
+                                                    <p class="lead">Isi form di bawah ini untuk melanjutkan pemesanan</p>
+                                                </div>
+                                            </div>
+                                        </div><!-- .nk-block -->
+                                        <div class="nk-block nk-block-lg">
+                                            <!-- <div class="nk-block-head">
+                                                <div class="nk-block-head-content">
+                                                    <h4 class="title nk-block-title">Setting Form Style</h4>
+                                                    <div class="nk-block-des">
+                                                        <p>You can make style out your setting related form as per below example.</p>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            <div class="card card-bordered">
+                                                <div class="card-inner">
+                                                    <div class="card-head">
+                                                        <h5 class="card-title">Website Setting</h5>
+                                                    </div>
+                                                    <!-- <form action="#" class="gy-3"> -->
+                                                        <div class="row g-3 align-center">
+                                                            <div class="col-lg-5">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="site-name">Nama</label>
+                                                                    <span class="form-note">Masukkan nama customer</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-7">
+                                                                <div class="form-group">
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="text" class="form-control" id="site-name" value="Dias Ansa">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row g-3 align-center">
+                                                            <div class="col-lg-5">
+                                                                <div class="form-group">
+                                                                    <label class="form-label">Email</label>
+                                                                    <span class="form-note">Input email customer</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-7">
+                                                                <div class="form-group">
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="text" class="form-control" id="site-email" value="dias.ansa@email.com">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row g-3 align-center">
+                                                            <div class="col-lg-5">
+                                                                <div class="form-group">
+                                                                    <label class="form-label">Nomor HP</label>
+                                                                    <span class="form-note">Input nomor HP customer</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-7">
+                                                                <div class="form-group">
+                                                                    <div class="form-control-wrap">
+                                                                        <input type="text" class="form-control" id="site-copyright" value="081222333456">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row g-3 align-center">
+                                                            <div class="col-lg-5">
+                                                                <div class="form-group">
+                                                                    <label class="form-label">Pembayaran</label>
+                                                                    <span class="form-note">Pilih metode pembayaran yang inginkan</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-7">
+                                                                <ul class="custom-control-group g-3 align-center flex-wrap">
+                                                                    <li>
+                                                                        <div class="custom-control custom-radio">
+                                                                            <input type="radio" class="custom-control-input" checked name="reg-public" id="reg-enable">
+                                                                            <label class="custom-control-label" for="reg-enable">QRis</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="custom-control custom-radio">
+                                                                            <input type="radio" class="custom-control-input" name="reg-public" id="reg-disable">
+                                                                            <label class="custom-control-label" for="reg-disable">Gopay</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="custom-control custom-radio">
+                                                                            <input type="radio" class="custom-control-input" name="reg-public" id="reg-request">
+                                                                            <label class="custom-control-label" for="reg-request">Ovo</label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="row g-3 align-center">
+                                                            <div class="col-lg-5">
+                                                                <div class="form-group">
+                                                                    <label class="form-label" for="site-off">Sudah bayar?</label>
+                                                                    <span class="form-note">Apakah customer sudah bayar lunas?</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-7">
+                                                                <div class="form-group">
+                                                                    <div class="custom-control custom-switch">
+                                                                        <input type="checkbox" class="custom-control-input" name="reg-public" id="site-off">
+                                                                        <label class="custom-control-label" for="site-off">Lunas</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> -->
+                                                        <div class="row g-3">
+                                                            <div class="col-lg-7 offset-lg-5">
+                                                                <div class="form-group mt-2">
+                                                                    <a href="{% url 'konfirmasi-page' %}">
+                                                                        <button type="submit" class="btn btn-lg btn-primary">Lanjutkan ke Dapur</button>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <!-- </form> -->
+                                                </div>
+                                            </div><!-- card -->
+                                        </div><!-- .nk-block -->
+                                    </div><!-- .components-preview -->
+                                </div>
+                            </div>
+
+{% endblock body %}
